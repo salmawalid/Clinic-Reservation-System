@@ -1,0 +1,25 @@
+version '3'
+
+services
+  frontend
+    build: .frontend  # Path to the directory containing the frontend Dockerfile
+    ports:
+      - "3000:3000"  # Map host port 3000 to container port 3000
+    depends_on:
+      - backend  # Ensure backend container is started first
+
+  backend
+    build: .backend  # Path to the directory containing the backend Dockerfile
+    ports:
+      - "5000:5000"  # Map host port 5000 to container port 5000
+    depends_on:
+      - database  # Ensure database container is started first
+
+  database
+      build: .backend
+      environment:
+      MYSQL_ROOT_PASSWORD: VARCHAR 
+      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_user: root
+    ports:
+      - "3306:3306"  # Map host port 3306 to container port 3306
