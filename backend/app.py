@@ -420,4 +420,5 @@ def cancel_appointment():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)1703928964047,0,,Non HTTP response code: java.net.MalformedURLException,Non HTTP response message: Illegal character found in host: '/',Thread Group 1-1,text,false,,875,0,1,1,null,0,0,0
+1703928999457,0,,Non HTTP response code: java.net.MalformedURLException,Non HTTP response message: Illegal character found in host: '/',Thread Group 1-1,text,false,,875,0,1,1,null,0,0,0
